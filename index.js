@@ -1,8 +1,9 @@
+require('dotenv').config();
 const { Client, GatewayIntentBits } = require('discord.js');
 const { joinVoiceChannel, createAudioPlayer, createAudioResource, AudioPlayerStatus } = require('@discordjs/voice');
 const path = require('path');
 
-const TOKEN = 'MTUwOTEzNTA5NDExODM1NDk4NQ.GkpNhx.U-EoYsyvFGm2mZkAjMA9Lk7Ovg74GOo7J3Yjrk';
+const TOKEN = process.env.DISCORD_TOKEN;
 
 const client = new Client({
   intents: [
